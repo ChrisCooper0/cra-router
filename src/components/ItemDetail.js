@@ -4,18 +4,18 @@ import React, { useEffect, useState } from "react";
 function ItemDetail({ match }) {
   const [item, setItem] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    fetchItem();
-  });
 
-  const fetchItem = async () => {
-    const res = await fetch(
-      `https://fakestoreapi.com/products/${match.params.id}`
-    );
-    const data = await res.json();
-    setItem(data);
-    setIsLoading(false);
-  };
+  useEffect(() => {
+    const fetchItem = async () => {
+      const res = await fetch(
+        `https://fakestoreapi.com/products/${match.params.id}`
+      );
+      const data = await res.json();
+      setItem(data);
+      setIsLoading(false);
+    };
+    fetchItem();
+  }, [match.params.id]);
 
   return (
     <div>
