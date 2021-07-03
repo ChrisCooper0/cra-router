@@ -16,16 +16,16 @@ function Shop() {
     setItems(data);
   };
 
+  const mapItems = (item) => (
+    <h3 key={item.id}>
+      <Link to={`/shop/${item.id}`}>{item.title}</Link>
+    </h3>
+  );
+
   return (
     <div>
       <h1>Shop</h1>
-      <div>
-        {items.map((item) => (
-          <h2 key={item.id}>
-            <Link to={`/shop/${item.id}`}>{item.title}</Link>
-          </h2>
-        ))}
-      </div>
+      <div>{items.map(mapItems)}</div>
     </div>
   );
 }
