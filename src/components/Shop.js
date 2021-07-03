@@ -10,7 +10,7 @@ function Shop() {
   }, []);
 
   const fetchItems = async () => {
-    const res = await fetch("https://fakestoreapi.com/products?limit=5");
+    const res = await fetch("https://fakestoreapi.com/products?limit=10");
     const data = await res.json();
     console.log(data);
     setItems(data);

@@ -21,7 +21,7 @@ function ItemDetail({ match }) {
       <h1>Shop</h1>
       <div>
         <h1>Item</h1>
-        <h2 prop={item.id}>{item.title}</h2>
+        <h2>{item.title}</h2>
         <p>{item.description}</p>
         <img src={item.image} alt="product-image" width="200" height="250" />
         <p>£{item.price}</p>
