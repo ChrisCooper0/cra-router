@@ -1,5 +1,6 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Shop() {
   const [items, setItems] = useState([]);
@@ -18,9 +19,13 @@ function Shop() {
   return (
     <div>
       <h1>Shop</h1>
-      {items.map((item) => (
-        <h1>{item.title}</h1>
-      ))}
+      <div>
+        {items.map((item) => (
+          <h2 key={item.id}>
+            <Link to={`/shop/${item.id}`}>{item.title}</Link>
+          </h2>
+        ))}
+      </div>
     </div>
   );
 }
