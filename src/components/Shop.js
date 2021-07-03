@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Shop() {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchItems();
@@ -14,6 +15,7 @@ function Shop() {
     const data = await res.json();
     console.log(data);
     setItems(data);
+    setIsLoading(false);
   };
 
   const mapItems = (item) => (
@@ -25,7 +27,7 @@ function Shop() {
   return (
     <div>
       <h1>Shop</h1>
-      <div>{items.map(mapItems)}</div>
+      <div>{isLoading ? <h3>Loading...</h3> : items.map(mapItems)}</div>
     </div>
   );
 }
