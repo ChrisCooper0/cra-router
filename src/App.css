@@ -7,10 +7,15 @@ nav {
   color: white;
 }
 
-.nav-links {
+.nav-ul {
   list-style: none;
   width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.nav-li {
+  text-transform: uppercase;
+  color: white;
 }

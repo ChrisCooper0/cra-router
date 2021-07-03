@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/about" component={About}></Route>
