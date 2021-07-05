@@ -5,6 +5,7 @@ import About from "./components/About";
 import Shop from "./components/Shop";
 import Contact from "./components/Contact";
 import ItemDetail from "./components/ItemDetail";
+import NotFound from "./components/404";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/shop" exact component={Shop}></Route>
           <Route path="/shop/:id" component={ItemDetail}></Route>
           <Route path="/contact" component={Contact}></Route>
+          <Route component={NotFound}></Route>
         </Switch>
       </div>
     </Router>
