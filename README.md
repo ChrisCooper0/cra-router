@@ -1,3 +1,9 @@
+## A create-react-app with react-router
+* Followed a tutorial initally but made my own by using the fakestoreapi to bring in data and display it in two components (Shop and ItemDetail)
+* I also added a 404 page which is displayed when the user goes to a URL not specified as a valid Link tag path
+### Clone the repo locally and run 'npm install' then 'npm start' to check it out!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
