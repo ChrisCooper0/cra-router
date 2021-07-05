@@ -19,7 +19,7 @@ function App() {
           <Route path="/shop" exact component={Shop}></Route>
           <Route path="/shop/:id" component={ItemDetail}></Route>
           <Route path="/contact" component={Contact}></Route>
-          <Route component={NotFound}></Route>
+          <Route path="*" component={NotFound}></Route>
         </Switch>
       </div>
     </Router>
